@@ -1,5 +1,5 @@
 import express from 'express'
-import { fetchUser } from '../controller/userController.js';
+import { fetchUser, registerNewUser } from '../controller/userController.js';
 const router=express.Router();
 /**
  * @swagger
@@ -14,6 +14,7 @@ const router=express.Router();
 
 
 router.get('/',fetchUser)
+router.post('/signup',registerNewUser)
 
 
 export default router
